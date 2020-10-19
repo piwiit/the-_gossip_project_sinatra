@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>
+    The gossip Project
+    </title>
+  </head>
+   <body>
+    <h1>Mon super site de gossip</h1>
+    <a href="/gossips/new/">NEW gossip</a>
+    <h3>La liste  complete de nos super potins : </h3>
+    <% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+  </body>
+</html>
