@@ -8,11 +8,13 @@
     <h1>Mon super site de gossip</h1>
     <a href="/gossips/new/">NEW gossip</a>
     <h3>La liste  complete de nos super potins : </h3>
-    <% gossips.each do |gossip| %>
+    <% gossips.each.with_index do |gossip , i| %>
         <p>
           <%= gossip.author %><br/>
           <%= gossip.content %>
+          <a href="/gossip/<%= i %>">lien vers le potin <%= i %></a>
         </p>
       <% end %>
+      
   </body>
 </html>
