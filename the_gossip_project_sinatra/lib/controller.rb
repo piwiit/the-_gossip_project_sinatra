@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :index, locals: { gossips: Gossip.all }
   end
+
   # envois l'utilisateur sur gossip/new  quand celui - ci est en fin d'adresse
   get '/gossips/new/' do
     erb :new_gossip
@@ -16,7 +17,7 @@ class ApplicationController < Sinatra::Base
   end
   # envois l'utilisateur sur la page show   quand celui - ci est en fin d'adresse
 
-  get '/gossips/:id' do
+  get '/gossips/:id/' do
     erb :show, locals: { gossip: Gossip.find(params['id']) }
   end
   # envois l'utilisateur sur la page edit quand celui - ci est en fin d'adresse

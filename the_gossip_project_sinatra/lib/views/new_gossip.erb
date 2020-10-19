@@ -1,14 +1,62 @@
 <html>
   <head>
     <title>Créer un potin</title>
+    <style>
+body{
+  background: #444;
+  color : #eee
+}  
+h1,p{
+  
+  margin-bottom: 1rem;
+  text-align : center
+}
+p{
+  font-size : 1,8rem;
+}
+form{
+  padding:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+} 
+input {
+  background: #333;
+  border: 0;
+  border-bottom: 1px solid #555;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  outline: none;
+  color: white;
+} 
+.button {
+  display: block;
+  margin: 2rem auto;
+
+  background: #f1c40f;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.button:hover {
+  color: white;
+  background: #e74c3c;
+}
+</style> 
   </head>
   <body>
     <h1>Crée un potin !</h1>
     <p>Balance ton potin via le formulaire ci-dessous</p>
-    <form action='/gossips/new/' method='POST'>
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
-      <input type='submit'/>
+    <form action='/gossips/new/' method='POST'><p>
+      Saisie ici ton nom :  </p><input type='text' name='gossip_author'/><br/>
+      <p> Balance ton potin :</p> <input type='text' name='gossip_content'/><br/>
+      <input class="button" type='submit'/>
     </form>
   </body>
 </html>
